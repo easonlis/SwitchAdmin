@@ -36,6 +36,47 @@ python3 manage.py migrate
 ```
 python3 manage.py createsuperuser
 ```
+* 现在可以尝试运行了
+```
+python3 manage.py runserver 127.0.0.1:80
+```
+* 最后使用 Nginx+uwsgi 稳定运行该工具
+
+Nginx 配置
+```
+server {
+    listen         80; 
+    server_name    127.0.0.1 
+    charset UTF-8;
+    access_log      /var/log/nginx/SwitchAdmin_access.log;
+    error_log       /var/log/nginx/SwitchAdmin_err.log;
+
+    client_max_body_size 75M;
+
+    location / { 
+        include uwsgi_params;
+        uwsgi_pass 127.0.0.1:8000;
+        uwsgi_read_timeout 60;
+    }   
+    location /static {
+        expires 30d;
+        autoindex on; 
+        add_header Cache-Control private;
+        alias /var/www/SwitchAdmin/static/; #需要指向静态资源所在目录
+     }
+ }
+```
+supervisor 配置
+```
+[program:switchcontroller]
+directory=/usr/local/bin
+command=uwsgi --ini /var/www/SwitchAdmin/uwsgi.ini #uwsgi配置所在位置
+
+user=root
+autostart=true
+autorestart=true
+startsecs=1
+```
 
 ![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/dashboard.PNG)
 ![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/bind.PNG)
