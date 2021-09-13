@@ -77,6 +77,13 @@ autostart=true
 autorestart=true
 startsecs=1
 ```
-3. Screenshot
-![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/dashboard.PNG)
-![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/bind.PNG)
+# 3. Screenshot
+![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshot/dashboard.PNG)
+
+![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshot/changevlan.png)
+
+![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshot/locate.png)
+
+![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshot/bind.PNG)
+
+![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshot/command.png)
