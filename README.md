@@ -4,7 +4,7 @@
 * 常用命令行操作、更改端口VLAN：通过直接登录相应的交换机进行操作。
 * 绑定或者解绑IP/MAC：在核心交换机操作。
 * 根据MAC/IP定位设置：如下图所示，首先在核心上查找到目标所在的端口，也即找到对应汇聚交换机，然后在汇聚交换机找到对应的接入交换机，最后找到所在的端口（需要根据实际网络拓扑，修改 HexinCaozuo.py、JiaohuanjiCaozuo.py、locate_item.py 中交换机列表以及各端口连接信息）。
-![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/example.png)
+![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshot/example.png)
 # 2. Install
 * 安装相关库
 ```
