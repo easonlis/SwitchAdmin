@@ -77,6 +77,6 @@ autostart=true
 autorestart=true
 startsecs=1
 ```
-
+3. Screenshot
 ![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/dashboard.PNG)
 ![](https://github.com/easonlis/SwitchAdmin/blob/master/static/screenshort/bind.PNG)
