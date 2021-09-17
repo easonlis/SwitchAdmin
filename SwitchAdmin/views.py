@@ -9,7 +9,7 @@ from . import locate_item
 import datetime
 
 
-adm, adm_pwd ='admin', 'GZDY@#2021'
+adm, adm_pwd ='admin', 'admin123'
 
 
 @login_required
